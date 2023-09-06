@@ -29,7 +29,7 @@ router.post('/insertData', (request, response) => {
 				return response.status(400).json({ error: 'El registro ya existe.' });
 			} else {
 				// Otro tipo de error, se puede manejar de manera diferente
-				return response.status(500).json({ error: 'url incorrecta' });
+				return response.status(500).json(error);
 			}
 			
 		}

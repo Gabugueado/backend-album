@@ -21,6 +21,7 @@ export const connection = mysql.createConnection({
     multipleStatements: true,
 
 });
+connection.connect()
 
 // Middleware
 app.use(cors());

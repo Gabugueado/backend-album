@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `videos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `videos` (
   `id` varchar(50) NOT NULL,
-  `titulo` varchar(50) DEFAULT NULL,
+  `titulo` varchar(100) DEFAULT NULL,
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `img` varchar(50) DEFAULT NULL,
   `url` varchar(45) DEFAULT NULL,
