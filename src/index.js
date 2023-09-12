@@ -1,11 +1,9 @@
 import express from 'express'
-import mysql from 'mysql'
+// import mysql from 'mysql'
 import cors from 'cors'
 
-import mysqlroutes from "./routes/mysql.js";
+// import mysqlroutes from "./routes/mysql.js";
 import firebaseroutes from "./routes/firebase.js";
-
-
 
 
 // crear express app
