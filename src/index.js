@@ -2,7 +2,10 @@ import express from 'express'
 import mysql from 'mysql'
 import cors from 'cors'
 
-import indexRoutes from "./routes/api.js";
+import mysqlroutes from "./routes/mysql.js";
+import firebaseroutes from "./routes/firebase.js";
+
+
 
 
 // crear express app
@@ -27,7 +30,8 @@ connection.connect()
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(indexRoutes);
+app.use(mysqlroutes);
+app.use(firebaseroutes);
 
 // starting the server
 app.listen(app.get("port"), () => {
