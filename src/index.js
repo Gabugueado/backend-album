@@ -15,22 +15,22 @@ const app = express()
 app.set("port", process.env.PORT || 4000);
 
 // configuracion base de datos
-export const connection = mysql.createConnection({
-    host: 'localhost',
-    database: 'album_videos',
-    user: 'root',
-    password: 'Abcd1234!',
-    charset: 'utf8mb4',
-    multipleStatements: true,
+// export const connection = mysql.createConnection({
+//     host: 'localhost',
+//     database: 'album_videos',
+//     user: 'root',
+//     password: 'Abcd1234!',
+//     charset: 'utf8mb4',
+//     multipleStatements: true,
 
-});
-connection.connect()
+// });
+// connection.connect()
 
 // Middleware
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(mysqlroutes);
+// app.use(mysqlroutes);
 app.use(firebaseroutes);
 
 // starting the server
